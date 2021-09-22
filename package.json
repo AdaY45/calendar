@@ -1,5 +1,4 @@
 {
-  "homepage": "https://github.com/AdaY45/calendar.git",
   "name": "calendar",
   "version": "0.1.0",
   "private": true,
@@ -7,9 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "deploy": "gh-pages -d build",
-    "predeploy": "yarn run build"
+    "lint": "next lint"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
