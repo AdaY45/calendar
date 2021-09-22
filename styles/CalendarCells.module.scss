@@ -1,0 +1,57 @@
+@import "util/variables";
+
+.body {
+  border-bottom: 2px solid $border-color;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    letter-spacing: 0;
+    margin: 18px 0;
+    font-weight: 500;
+
+    .cell {
+      padding: 13px;
+    }
+
+    .cell:hover {
+      cursor: pointer;
+      position: relative;
+      color: $yellow;
+    }
+    
+    .cell:hover::before {
+      transform: translateX(-50%);
+      border-radius: 100%;
+      position: absolute;
+      background: $yellow;
+      bottom: 5px;
+      height: 7px;
+      content: '';
+      width: 7px;
+      left: 50%;
+  }
+
+    .disabled {
+      color: $border-color;
+      pointer-events: none;
+    }
+    .selected {
+      background-color: $yellow;
+      color: $gray;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .body {
+    .row {
+      font-size: 13px;
+      margin: 7px 0;
+      .cell {
+        padding: 13px 0;
+      }
+    }
+  }
+}

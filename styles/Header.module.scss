@@ -1,0 +1,60 @@
+@import "util/variables";
+
+.header-container {
+    background-color: #fff;
+    color: $gray;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 90px;
+
+    .logo {
+        width: 120px;
+        cursor: pointer;
+    }
+
+    .nav-btn {
+        font-size: 22px;
+        letter-spacing: 20;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: $gray;
+        margin: 10px 0 10px 70px;
+        padding-bottom: 23px;
+        position: relative;
+        top: 20%;
+    }
+
+    .active::before {
+        transform: translateX(-50%);
+        border-radius: 100%;
+        position: absolute;
+        background: $yellow;
+        bottom: 10px;
+        height: 10px;
+        content: '';
+        width: 10px;
+        left: 50%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .header-container {
+        padding: 40px 50px 30px;
+
+        .nav-btn {
+            top: 32%;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .header-container {
+        padding: 30px 20px;
+
+        .nav-btn {
+            margin: 0 0 0 10px;
+            font-size: 17px;
+            top: 45%;
+        }
+    }
+}
