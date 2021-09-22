@@ -13,12 +13,6 @@ const calendarSlice = createSlice({
         closePopup(state) {
             state.isPopupOpen = !state.isPopupOpen;
         }
-        // nextMonth(state, action) {
-        //     state.currentMonth = action.payload;
-        // },
-        // prevMonth(state, action) {
-        //     state.currentMonth = action.payload;
-        // },
     },
 });
 

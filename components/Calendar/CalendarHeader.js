@@ -7,7 +7,6 @@ import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons
 import styles from "../../styles/CalendarHeader.module.scss";
 
 const CalendarHeader = (props) => {
-    // const currentMonth = useSelector(state => state.currentMonth);
     const dispatch = useDispatch();
     const dateFormat = "MMMM yyyy";
 
@@ -15,12 +14,10 @@ const CalendarHeader = (props) => {
     library.add(faChevronRight);
 
     const prevMonth = () => {
-        // dispatch(calendarActions.prevMonth(subMonths(currentMonth, 1)));
         props.onSetCurrentMonth(subMonths(props.currentMonth, 1));
     };
 
     const nextMonth = () => {
-        // dispatch(calendarActions.nextMonth(addMonths(currentMonth, 1)));
         props.onSetCurrentMonth(addMonths(props.currentMonth, 1));
     };
 

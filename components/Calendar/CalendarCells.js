@@ -21,9 +21,7 @@ const CalendarCells = (props) => {
     let formattedDate = "";
 
     const onDateClick = (day) => {
-        // dispatch(calendarActions.onDateClick(day));
         console.log(format(props.currentMonth, "MMMM") + " " + format(day, "do") + " " + format(day, "EEEE"));
-        // setSelectedDate(parseISO(day));
         dispatch(calendarActions.handleDateClick({currentMonth: format(props.currentMonth, "MMMM"), selectedDate: `${format(day, "do")} ${format(day, "EEEE")}`}));
     }
 
@@ -38,7 +36,6 @@ const CalendarCells = (props) => {
                 key={day}
                 onClick={() => onDateClick(cloneDay)}>
                     <span className={styles.number}>{formattedDate}</span>
-                    {/* <span className="bg">{formattedDate}</span> */}
                 </div>
             );
             day = addDays(day, 1);
